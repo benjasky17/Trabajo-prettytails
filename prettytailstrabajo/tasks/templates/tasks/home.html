@@ -1,0 +1,16 @@
+{% extends 'tasks/base.html' %}
+{% block content%}
+
+<br>
+<h3 style="color: aliceblue;">Inicio</h3>
+{%if request.user.is_authenticated%}
+
+<hr>
+<h4>    
+
+{{user.username | upper}}, Bienvenido
+
+</h4>
+
+{%endif%}
+{% endblock %}

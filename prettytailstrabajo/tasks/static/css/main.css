@@ -1,0 +1,42 @@
+body{
+    background-color: #101728;
+}
+
+
+
+
+.navbar-brand {
+    color: rgb(250, 250, 250);
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: rgb(250, 250, 250);
+}
+
+.card-body {
+    border-color:white ;
+}
+
+.navbar-toggler {
+    padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
+    font-size: var(--bs-navbar-toggler-font-size);
+    line-height: 1;
+    color: #bcbefa;
+    background-color: #bcbefa ;
+    border: aliceblue solid var(--bs-navbar-toggler-border-color);
+    border-radius: var(--bs-navbar-toggler-border-radius);
+    transition: var(--bs-navbar-toggler-transition);
+
+}
+
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    background-color:#bcbefa;
+    background-image: var(--bs-navbar-toggler-icon-bg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    color: white;
+}
