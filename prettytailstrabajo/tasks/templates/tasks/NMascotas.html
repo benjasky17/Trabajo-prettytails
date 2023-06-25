@@ -1,0 +1,81 @@
+{% extends 'tasks/base.html' %}
+{% block content %}
+<br>
+<h3 style="color: aliceblue;">Mascotas</h3>
+<br>
+
+<div class="aside">
+
+  <body>
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <div class="input-group">
+            <input type="text" id="searchInput" class="form-control" placeholder="Buscar...">
+            <button class="btn btn-primary" id="searchButton">Buscar</button>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-6 offset-md-3">
+          <ul id="searchResults" class="list-group"></ul>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card" data-cardtitle="a" data-cardtext="Some quick example text to build on the card title and make it more interesting.">
+            <img class="card-img-top" src="https://www.clarin.com/img/2022/07/06/los-perros-de-pelo-corto___uCxI9StAx_2000x1500__1.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">a</h5>
+              <p class="card-text">Some quick example text to build on the card title and make it more interesting.</p>
+              <a href="{% url 'infomascotas' %}" class="btn btn-primary">Ver mascotas</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card" data-cardtitle="Card title" data-cardtext="Some quick example text to build on the card title and make it more interesting.">
+            <img class="card-img-top" src="https://www.clarin.com/img/2022/07/06/los-perros-de-pelo-corto___uCxI9StAx_2000x1500__1.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make it more interesting.</p>
+              <a href="{% url 'infomascotas' %}" class="btn btn-primary">Ver mascotas</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    document.getElementById('searchButton').addEventListener('click', function() {
+      var searchInput = document.getElementById('searchInput').value.toLowerCase();
+      var cards = document.getElementsByClassName('card');
+      var searchResults = document.getElementById('searchResults');
+      searchResults.innerHTML = '';
+
+      for (var i = 0; i < cards.length; i++) {
+        var card = cards[i];
+        var cardTitle = card.dataset.cardtitle.toLowerCase();
+        var cardText = card.dataset.cardtext.toLowerCase();
+
+        if (cardTitle.includes(searchInput) || cardText.includes(searchInput)) {
+          card.style.display = 'block';
+
+          var li = document.createElement('li');
+          li.className = 'list-group-item';
+          li.innerText = cardTitle;
+          li.addEventListener('click', function() {
+            window.location.href = card.querySelector('a').href;
+          });
+          searchResults.appendChild(li);
+        } else {
+          card.style.display = 'none';
+        }
+      }
+    });
+  </script>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'tasks/base.html' %}
+
+{% block content%}
+
+<br>
+<h3 style="color: aliceblue;">Mascotas</h3>
+<br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card">
+                <img class="card-img-top" src="https://www.clarin.com/img/2022/07/06/los-perros-de-pelo-corto___uCxI9StAx_2000x1500__1.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <a href={% url 'NMascotas' %} class="btn btn-primary">Ver mascotas</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="box" style="background-color: #260E69;">
+                <h2 style="color: aliceblue;">Desparasitaciones</h2>
+                <p style="color: aliceblue;">Contenido relacionado con desparasitaciones...</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed tenetur eos temporibus modi rem voluptatibus quod consequuntur quidem placeat soluta laboriosam, architecto quis eligendi, odit deserunt, laudantium ex enim quasi.
+                Assumenda optio numquam omnis. Eligendi beatae dolore officiis ut minus cumque, eos harum quis voluptates vitae minima, dicta a aperiam non tempore? Esse exercitationem, magni tempore facere assumenda veniam Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi eius quaerat libero quod laboriosam, aspernatur quos unde, beatae molestias cum! Fugit cum voluptatum nihil, nobis ratione eos possimus numquam!hic?</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="box" style="background-color: #260E69;">
+                <h2 style="color: aliceblue;">Vacunaciones</h2>
+                <p style="color: aliceblue;">Contenido relacionado con vacunaciones...</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="box" style="background-color: #260E69;">
+                <h2 style="color: aliceblue;">Tratamiento médico</h2>
+                <p style="color: aliceblue;">Contenido relacionado con tratamiento médico...</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
