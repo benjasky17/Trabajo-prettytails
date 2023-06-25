@@ -3,10 +3,14 @@ body{
 }
 
 
+<<<<<<< HEAD
 .form-label {
     margin-bottom: 0.5rem;
     color: aliceblue;
 }
+=======
+
+>>>>>>> f37be34e12396f6c2c65534768d11806d03a7709
 
 .navbar-brand {
     color: rgb(250, 250, 250);
@@ -15,6 +19,12 @@ body{
     color: rgb(250, 250, 250);
 }
 
+<<<<<<< HEAD
+=======
+.card-body {
+    border-color:white ;
+}
+>>>>>>> f37be34e12396f6c2c65534768d11806d03a7709
 
 .navbar-toggler {
     padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
@@ -39,6 +49,7 @@ body{
     background-position: center;
     background-size: 100%;
     color: white;
+<<<<<<< HEAD
 }
 
 
@@ -79,4 +90,6 @@ body{
     max-width: 90%;
     height: auto;
     border-radius: 10px;
+=======
+>>>>>>> f37be34e12396f6c2c65534768d11806d03a7709
 }

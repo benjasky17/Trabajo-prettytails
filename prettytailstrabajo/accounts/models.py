@@ -6,11 +6,16 @@ from django.db.models.signals import post_save
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile', verbose_name='Usuario')
+<<<<<<< HEAD
     first_name = models.CharField(max_length=150, blank=True, null=True, verbose_name='Nombre')
     last_name = models.CharField(max_length=150, blank=True, null=True, verbose_name='Apellidos')
     rut_user = models.IntegerField(null=True, blank=True, verbose_name='Rut')
     address = models.CharField(max_length=50, null=True, blank=True, verbose_name='Dirección')
     location = models.CharField(max_length=50, null=True, blank=True, verbose_name='comuna')
+=======
+    address = models.CharField(max_length=150, null=True, blank=True, verbose_name='Dirección')
+    location = models.CharField(max_length=150, null=True, blank=True, verbose_name='comuna')
+>>>>>>> f37be34e12396f6c2c65534768d11806d03a7709
     telephone = models.CharField(max_length=50, null=True, blank=True, verbose_name='Teléfono')
 
     class Meta:
@@ -23,6 +28,7 @@ class Profile(models.Model):
 
 def create_user_profile(sender, instance, created, **kwargs):
     if created:
+<<<<<<< HEAD
         Profile.objects.create(user=instance, first_name=instance.first_name, last_name=instance.last_name)
 
 def save_user_profile(sender, instance, **kwargs):
@@ -32,3 +38,13 @@ def save_user_profile(sender, instance, **kwargs):
 
 post_save.connect(create_user_profile, sender=User)
 post_save.connect(save_user_profile, sender=User)
+=======
+        Profile.objects.create(user=instance)
+
+def save_user_profile(sender, instance, **kwargs):
+    instance.profile.save()
+
+post_save.connect(create_user_profile, sender=User)
+post_save.connect(save_user_profile, sender=User)
+# Create your models here.
+>>>>>>> f37be34e12396f6c2c65534768d11806d03a7709

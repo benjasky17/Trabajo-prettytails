@@ -41,7 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'accounts',
     'tasks',
+<<<<<<< HEAD
     'mascotas'
+=======
+>>>>>>> f37be34e12396f6c2c65534768d11806d03a7709
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
@@ -86,7 +89,11 @@ pymysql.install_as_MySQLdb()
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
+<<<<<<< HEAD
         'NAME': 'Ptails_db_1',
+=======
+        'NAME': 'Ptails',
+>>>>>>> f37be34e12396f6c2c65534768d11806d03a7709
         'USER': 'root',
        
         

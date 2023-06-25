@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <br>
@@ -8,10 +9,18 @@
 <link href="{% static "/css/main.css" %}" type="text/css" rel="stylesheet" media="screen,projection" />
 <br>
 
+=======
+{% extends 'tasks/base.html' %}
+{% block content%}
+{% load crispy_forms_tags %}
+<br>
+<h3>Registrarse</h3>
+>>>>>>> f37be34e12396f6c2c65534768d11806d03a7709
 
 <br>
 <!-- contraseña=12345 superuser=benja correo=admin@admin.com-->
 <form action="" method="post">
+<<<<<<< HEAD
   {% csrf_token %}
   <div class="card mx-auto bg-dark" style="width: 40rem; border-radius: 1rem; border-color: #ffffff;">
     <div class="card-body">
@@ -55,5 +64,19 @@
   </div>
 </form>
 <br><br><br>
+=======
+    {% csrf_token %}
+
+    <div class="card mx-auto" style="width: 30rem;">
+      <div class="card-body">
+        <h5 class="card-title">Complete todos los campos</h5>
+        {{ form | crispy }}
+        <a href={% url 'home' %} class="card-link">Inicio</a>
+        <a href={% url 'login' %} class="card-link">Iniciar sesion</a>
+        <button class="btn btn-sm btn-primary float-end" type="submit">Registrarse</button>
+      </div>
+    </div>
+</form>
+>>>>>>> f37be34e12396f6c2c65534768d11806d03a7709
 
 {% endblock %}

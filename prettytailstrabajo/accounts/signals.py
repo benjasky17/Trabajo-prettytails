@@ -9,7 +9,12 @@ def add_user_to_users_group(sender, instance, created, **kwargs):
         try:
             users = Group.objects.get(name='Cliente')
         except Group.DoesNotExist:
+<<<<<<< HEAD
             users = Group.objects.create(name='Administrativo')
             users = Group.objects.create(name='Cliente')
             users = Group.objects.create(name='Veterinario')            
+=======
+            users = Group.objects.create(name='Veterinario')
+            users = Group.objects.create(name='Administrativo')
+>>>>>>> f37be34e12396f6c2c65534768d11806d03a7709
         instance.user.groups.add(users)

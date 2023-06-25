@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
+<<<<<<< HEAD
 from django.urls import reverse
 from accounts.models import Profile
 from .forms import CustomUserCreationForm,PerfilForm
@@ -33,6 +34,17 @@ def Perfil(request):
         
 
     return render(request, 'tasks/Perfil.html', {'form': form, 'user': user})
+=======
+from .forms import CustomUserCreationForm
+from django.contrib.auth import authenticate, login
+
+
+def home(request):
+    return render(request,'tasks/home.html')
+@login_required
+def mascotas(request):
+    return render(request,'tasks/mascotas.html')
+>>>>>>> f37be34e12396f6c2c65534768d11806d03a7709
 
 def exit(request):
     logout(request)
@@ -54,6 +66,7 @@ def register(request):
             
             return redirect('home')
     return render(request,'registration/register.html', data)
+<<<<<<< HEAD
 
 def nosotros(request):
     return render(request,'tasks/nosotros.html')
@@ -81,3 +94,5 @@ def NMascotas(request):
 
 def infomascotas(request):
     return render(request,'tasks/infomascotas.html')
+=======
+>>>>>>> f37be34e12396f6c2c65534768d11806d03a7709

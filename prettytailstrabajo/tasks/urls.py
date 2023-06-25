@@ -16,6 +16,7 @@ Including another URLconf
 """
 
 from django.urls import path
+<<<<<<< HEAD
 from . import views
 from .views import home, Perfil, exit, register, nosotros, NMascotas, detalle_perfil, infomascotas
 
@@ -28,5 +29,14 @@ urlpatterns = [
    path('NMascotas/', NMascotas, name='NMascotas'),
    path('detalle_perfil/', detalle_perfil, name='detalle_perfil'),
    path('infomascotas/', infomascotas, name='infomascotas'),
+=======
+from .views import home, mascotas, exit ,register
+
+urlpatterns = [
+   path('',home, name='home'),
+   path('mascotas/', mascotas, name='mascotas'),
+   path('logout/', exit, name='exit'),
+   path('register', register, name='register'),
+>>>>>>> f37be34e12396f6c2c65534768d11806d03a7709
  
 ]
